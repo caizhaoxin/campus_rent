@@ -1,0 +1,8 @@
+<template name = 'picture'>
+<view class='user-head'>
+  <view class='user-head-pic-wrap'>
+    <image src='{{userInfo.avatarUrl}}' class='user-head-pic'></image>
+  <text class='user-name'>{{userInfo.nickName}}</text>
+  </view>
+</view>
+</template>

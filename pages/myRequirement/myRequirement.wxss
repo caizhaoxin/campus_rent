@@ -1,0 +1,113 @@
+/* pages/myOrders/myOrders.wxss */
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #da7c0c;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.foodList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+.food {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 170rpx;
+  border-bottom: 1rpx solid #ececec;
+  background: white;
+  text-align: left;
+}
+
+.danhao {
+  font-size: 14px;
+  text-align: left;
+}
+
+.food::before {
+  content: "";
+  width: 15rpx;
+  height: 100%;
+  left: -15rpx;
+  top: 0;
+  border: 1px solid white;
+}
+
+.food .img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.food-info {
+  padding-left: 15rpx;
+  line-height: 40rpx;
+  flex: 1;
+}
+
+.food .name {
+  font-size: 30rpx;
+  text-align: left;
+}
+
+.food .sales {
+  font-size: 25rpx;
+  color: #acacac;
+  text-align: left;
+}
+
+.food .price {
+  font-size: 30rpx;
+  color: red;
+  text-align: left;
+}
+
+.food-numb {
+  height: 50rpx;
+  display: flex;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  line-height: 50rpx;
+  font-size: 40rpx;
+}
+
+/*灰色的空白横线*/
+
+.graySpace {
+  padding-left: 40rpx;
+  background: #eee;
+  font-size: 12px;
+  min-height: 30rpx;
+}
+
+.bt01 {
+  right: 1px;
+}

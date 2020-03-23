@@ -1,0 +1,139 @@
+.group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  font-size: 14px;
+}
+
+.group-header {
+  line-height: 70rpx;
+  display: flex;
+  padding: 0 20rpx;
+  background: #f9f9f9;
+}
+
+.group-body {
+  background: white;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  padding: 5rpx 20rpx;
+}
+
+.img-upload {
+  padding: 20rpx;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.img-add {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin: 10rpx;
+  border: 1rpx dashed #ddd;
+}
+
+.input-item {
+  padding: 20rpx;
+  line-height: 2;
+  display: flex;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e8e8e8;
+}
+
+.input-item:first-child {
+  border-top: 0;
+}
+
+.input-item-label {
+  display: block;
+  width: 5em;
+  color: #666;
+}
+
+.input-item-content {
+  color: #333;
+  flex: 1;
+}
+
+.btn-submit {
+  padding: 20rpx;
+}
+
+.btn-submit {
+  width: 96%;
+  line-height: 88rpx;
+}
+
+.btn-orange {
+  background: #f7982a;
+  color: white;
+}
+
+.question-text {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.question-text text {
+  display: block;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.question-text view {
+  font-size: 50rpx;
+  color: orange;
+}
+
+
+.weui-uploader__file {
+  float: left;
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+.weui-uploader__img {
+  display: block;
+  width: 79px;
+  height: 79px;
+}
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+}
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hideTrue {
+  display: none
+}

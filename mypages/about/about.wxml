@@ -1,0 +1,6 @@
+<view class="aboutme">
+  <image src='/images/scnu.jpg' class='photo'></image>
+  <view  hover-class="view-hover-class" id='team_name' style='inline-flex'>租租侠</view>
+  <text  hover-class="view-hover-class" space="nbsp" style='display: inline-flex; align-items:center;'>    欢迎致电\n13250128445</text>
+  <text  hover-class="view-hover-class " class="team_imformation_font_style" style='inline-flex'>华南师范大学软件学院\n@2017级菜鸡小儿子队</text>
+</view>

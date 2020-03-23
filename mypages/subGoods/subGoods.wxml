@@ -1,0 +1,86 @@
+<!--mypages/subGoods/subGoods.wxml-->
+<!-- 上传物品页面 -->
+<form bindsubmit='submit' bindreset='reset'>
+<view class='group'>
+  <view class='group-header'>商品名字</view>
+  <view class='group-body'>
+    <view class='input-item'>
+      <view class='input-item-content'>
+        <input type='text' name="goodsName" auto-focus placeholder='请输入商品名字'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='group-header'>商品描述</view>
+  <view class='group-body'>
+    <textarea  name="goodsDescription" placeholder='请输入产品的描述，最多可以输入500字' maxlength='500'></textarea>
+  </view>
+
+  <view class='group-header'>上传图片 {{count}}/3张  </view>
+  <view class='group-body'>
+              <view class="weui-uploader__files">
+                <block wx:for="{{pics}}" wx:for-item="image">
+                  <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                  </view>
+                </block>
+              </view>
+    <view class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+  </view>
+
+  <view class='group-header'>详细信息</view>
+  <view class='group-body'>
+     <view class='input-item'>
+      <text class='input-item-label'>类别</text>
+      <picker value='{{selectdIndex}}' mode='selector' range='{{array}}' bindchange='typeChange'>{{selectdIndexType}}</picker>
+      </view>
+      <view class='input-item'>
+      <text class='input-item-label'>租金/元</text>
+       <input type='digit' name='rental' auto-focus placeholder='请输入租金'></input>
+      </view>
+      <view class='input-item'>
+      <text class='input-item-label'>/</text>
+      <picker value='{{unit}}' range='{{unitList}}' bindchange='unitChange'>{{unit}}</picker>
+      </view>
+  </view>
+
+  <view class='group-header'>联系信息</view>
+  <view class='group-body'>
+    <view class='input-item'>
+      <text class='input-item-label'>联系人</text>
+      <view class='input-item-content'>
+        <input type='text' name='sellerName' auto-focus placeholder='请输入您的姓名'></input>
+      </view>
+    </view>
+
+    <view  class="input-item">
+      <text class="input-item-label">手机号码</text>
+      <view class="input-item-content">
+        <input type='number' name='phoneNumber' auto-focus placeholder='请输入您的手机号码'  maxlength='11' ></input>
+      </view>
+    </view>
+
+    <view class='input-item'>
+      <text class='input-item-label'>微信账号</text>
+      <view class='input-item-content'>
+        <input type='text' name='wxID' auto-focus placeholder='请输入您的微信ID'></input>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="btn-submit">
+    <button type='primary' formType="submit" hover-class='none' class='btn-block btn-orange'>确认提交</button>
+    <button type='warm' formType="reset" hover-class='none' class='btn-block btn-orange'>重置</button>
+  </view>
+
+    <view class='question-text'>
+      <text>如问题无法简单描述清楚</text>
+			<text>可以直接拨打电话</text>
+      <view bindtap="callContact" data-tel="400-1234-567">400-1234-567</view>
+  </view>
+
+</view>
+</form>

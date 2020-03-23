@@ -1,0 +1,21 @@
+<!-- 购物车清单 -->
+<template name='cart-list'>
+  
+    <view class='food'>
+      <image class='img' src='/img/cp02.jpg'></image>
+      <view class='food-info'>
+       <view class="name">珀莱雅水动力护肤品套装</view>
+       <view class="sales">月售：11 件 / 库存：121件</view>
+       <view class="price">￥：129.00</view>
+      </view>
+      <view class="food-numb">
+       <view class="remove" bindtap="myjian" hidden=""   data-jiage="10">-</view>
+       <text class="mytext" hidden="">2</text>
+       <view class="add"   bindtap="myjia" data-jiage="10">+</view>
+     </view>
+    </view>
+
+
+  
+
+</template>

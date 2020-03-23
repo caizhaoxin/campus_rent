@@ -1,0 +1,13 @@
+<!-- 购物车底部 -->
+<template name='cart-footer'> 
+<view class='footer active'>
+  <view class='left' style='70%'>
+    <view class='img' style='background: #FFD161'>
+    <image src='/images/sp02.png' style='width: 60rpx;height: 60rpx;'></image>
+    </view>
+    <view class='price'>￥：253.00</view>
+  </view>
+  
+  <view class='pay' style='30%' bindtap='settlement'>去结算</view>
+</view>
+</template>

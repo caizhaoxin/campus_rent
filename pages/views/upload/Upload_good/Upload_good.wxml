@@ -1,0 +1,123 @@
+<!-- 发布闲置出租信息页面 -->
+<form bindsubmit='submit'>
+<view class='all_page'>
+  <!-- 个人信息 -->
+  <view class='personal_information'>
+    <view class='tips'>
+      <image src='/images/gerenxinxi.png' mode='scaleToFill'></image>
+      <text>个人信息</text>
+    </view>
+    <view class='line'>
+      <view class='title'>联系人姓名</view>
+      <view class='right'>
+        <input name="linkmanName" placeholder="请输入您的姓名" placeholder-class="placeholderStyle" confirm-type="done" type='text' onfocus="javascript:if(this.value=='请输入您的姓名')this.value=''"></input>
+      </view>
+    </view>
+    <view class='line'>
+      <text class='title'>微信号码</text>
+      <view class='right'>
+        <input name="wxID" placeholder='请输入您的微信号' placeholder-class="placeholderStyle" confirm-type="done" type='text'></input>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='title'>手机号码</view>
+      <view class='right'>
+        <input name="phoneNumber" placeholder='请输入您的手机号码' placeholder-class="placeholderStyle" confirm-type="done" type='number'></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- 求租的物品信息 -->
+  <view class='seeking_food_information'>
+    <view class='tips'>
+      <image src='/images/food-pic.png' mode='scaleToFill'></image>
+      <text>物品信息</text>
+    </view>
+     <view class='line'>
+      <view class='title'>物品名字</view>
+      <view class='right'>
+        <input name="goodsName" placeholder='请输入物品的名字' placeholder-class="placeholderStyle" confirm-type="done" type='text'></input>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='title'>物品类型</view>
+      <view class='right'>
+        <picker name="selectdIndexType" bindchange='select_food_type' value='{{food_type_index}}' range='{{food_type}}'>
+          <text class="{{(food_type_index == 0) ? '' : 'disappear'}}">{{select_food_type}}</text>
+          <text class="{{(food_type_index == 0) ? 'disappear': ''}}">{{food_type[food_type_index]}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class='line'>
+      <view class='title'>交易地点</view>
+        <view class='right'>
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" bindcancel="bindMultiPickerColumnCancel" value="{{multiIndex}}" range="{{multiArray}}">
+            <text wx:if="{{haveChooseUniversity==0}}">请选择学校 ></text>
+            <view wx:else>
+                {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+            </view>
+          </picker>
+      </view>
+    </view>
+
+    <view class='line'>
+      <view class='title'>租金(元)</view>
+      <view class='right'>
+        <input name="rental" placeholder='请输入租金' placeholder-class="placeholderStyle" confirm-type="done" type='digit'></input>
+      </view>
+
+    </view>
+    <view class='line'>
+      <view class='title'>时间(单位)</view>
+      <view class='right'>
+        <picker name="selectdIndexType" bindchange='select_time_type' value='{{time_index}}' range='{{time_type}}'>
+          <text class="{{(time_index == 0) ? '' : 'disappear'}}">{{select_time_type}}</text>
+          <text class="{{(time_index == 0) ? 'disappear': ''}}">{{time_type[time_index]}}</text>
+        </picker>
+      </view>
+    </view>
+
+    <view class='box'>
+      <view class='tips'>
+        <image src='/images/describe_foods.png' mode='aspectFit'></image>
+        <text>物品描述</text>
+      </view>
+      <textarea name="goodsDescription" placeholder="描述您的物品的特点" placeholder-class="textareaStyle" cursor-spacing="150"></textarea>
+    </view>
+<!-- 添加照片 -->
+    <view>
+      <view class='tips'>
+        <image src='/images/add_pic.png'  ></image>
+        <text>添加照片 {{count}}/9张</text>
+      </view>
+
+<view class='group'>
+
+  <view class='group-body'>
+    <view class="weui-uploader__files">
+      <block wx:for="{{pics}}" wx:for-item="image">
+        <view class="weui-uploader__file">
+          <image class="weui-uploader__img" src="{{image}}" data-idx="{{index}}" bindtap="handleImagePreview" mode='aspectFill'></image>
+          <image class='delete' src='/images/shanchu4.png' data-idx="{{index}}" bindtap="deletePic" mode='aspectFill'></image>
+        </view>
+      </block>
+    </view>
+    <view class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+    
+  </view>
+
+
+  </view>
+
+</view>
+    </view>
+  <view class='border-bottom'></view>
+  <!-- 发布按钮 -->
+  <view class='footer'>
+    <button style='default' form-type='submit'>发布</button>
+    <view class='blank'></view>
+  </view>
+</view>
+</form>

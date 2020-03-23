@@ -1,0 +1,87 @@
+/* pages/views/feedback/feedback.wxss */
+.all{
+  padding: 30rpx 50rpx;
+}
+
+.line{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-end{
+  align-items: flex-end;
+}
+.left{
+  width: 15%;
+}
+.right{
+  width: 80%;
+}
+.feedback-pic{
+  width: 64rpx;
+  height: 64rpx;
+}
+.total_title{
+  font-size: 30rpx;
+  color: #14446a;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
+.second_line{
+  font-size: 28rpx;
+  margin-top: 50rpx;
+}
+
+.title_input{
+  border: 1rpx solid #14446a;
+  margin-right: 4rpx;
+  padding-left: 10rpx;
+}
+
+.inputStyle{
+  /* padding-left: 10rpx; */
+  
+}
+.third_line{
+  margin-top: 20rpx;
+}
+.third_line image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.third_line_title{
+  font-size: 28rpx;
+  color: #14446a;
+  margin-left: 8rpx; 
+}
+.content_textarea{
+  border: 1rpx solid #14446a;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+}
+.textareaStyle{
+  font-size: 28rpx;
+  color: #888888;
+  padding-left: 10rpx;
+}
+.border-bottom{
+  border-bottom: 1rpx solid #14446a;
+  margin-top: 40rpx;
+  height: 1rpx;
+  width: 100%;
+}
+
+.bt{
+  background: #14446a;
+  margin-top: 20rpx;
+  color: white;
+  width: 80%;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

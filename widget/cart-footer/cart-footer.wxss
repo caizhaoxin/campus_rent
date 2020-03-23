@@ -1,0 +1,57 @@
+page{
+  background-color: floralwhite;
+}
+
+.footer{
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 8vh;
+}
+
+.footer .img{
+  position: absolute;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100rpx;
+  left: 40rpx;
+  top: -45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left{
+  position: relative;
+  flex: 1;
+  font-size: 28rpx;
+  background: white;
+  line-height: 100rpx;
+  padding-left: 130rpx;
+
+}
+
+.footer .pay{
+  width: 200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  font-size: 30rpx;
+  background: tomato;
+}
+
+.footer .price{
+  margin-top: 20rpx;
+  color: red;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  margin-left: 50rpx;
+}
+
+.footer .activite .pay{
+  background: #FFD161;
+  color: black;
+}

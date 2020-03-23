@@ -1,0 +1,8 @@
+/* pages/views/feedbackDetail/feedbackDetail.wxss */
+.all{
+  padding: 20rpx 30rpx;
+
+}
+.first_line{
+  margin-top: 20rpx;
+}

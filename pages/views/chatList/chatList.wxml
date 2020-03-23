@@ -1,0 +1,25 @@
+<view wx:if="{{noLogin!=''}}">
+{{noLogin}}
+</view>
+<view wx:else class='all'>
+  <block wx:for="{{chatDataList}}">
+    <view class='line flex-start' bindtap='trun_to_charRoom' data-senterOpenid='{{item.senterOpenid}}' data-avatarUrl='{{item.avatarUrl}}'>
+    <!-- 头像 -->
+      <view class='left'>
+        <image class='head-pic' src='{{item.avatarUrl}}' mode='aspectFill'></image>
+      </view>
+      <!-- 名字和是否有未读信息 -->
+      <view class='middle'>
+        <view class='above'>
+          <text class='nick-name'>{{item.nickName}}</text>
+        </view>
+        <view wx:if="{{item[0]!=0}}" class="{{isRead ? 'disappear' : 'do_not_read under'}}">
+          <text class='tips' >未读信息</text>
+        </view>
+      </view>
+      <view class='right del'>
+        <image src='/images/chartList-guanbi-1.png'></image>
+      </view>
+    </view>
+  </block>
+</view>

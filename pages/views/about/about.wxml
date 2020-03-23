@@ -1,0 +1,14 @@
+<view class="aboutme">
+ <view id='team_name' >租租侠</view>
+  <image src='/images/scnu.jpg' class='photo' mode='aspectFill'></image>
+ 
+  <view class='developer flex-column'>
+    <view style='color:#000000;'>开发者</view>
+    <text style='color:#353535;'>黄文鑫&蔡兆信</text>
+  </view>
+  <view  class="team_imformation_font_style flex-column"  >
+    <text>华南师范大学软件学院</text>
+    <text>@2017级租租侠团队</text>
+  </view>
+  
+</view>

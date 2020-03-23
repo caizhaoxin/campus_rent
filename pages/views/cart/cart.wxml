@@ -1,0 +1,22 @@
+<!-- 购物车页面 -->
+
+<!-- 购物车清单 开始 -->
+ <import src="../../../widget/cart-list/cart-list.wxml"/>
+  <scroll-view style='height: 90vh;' scroll-y='true' class='list'>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    <template is='cart-list'></template>
+    
+  </scroll-view>
+<!-- 购物车清单 结束 -->
+<!-- 购物车底部 开始 -->
+ 
+    <import src="../../../widget/cart-footer/cart-footer.wxml"/>
+    <template is='cart-footer'>
+    </template>
+  
+<!-- 购物车底部 结束 -->

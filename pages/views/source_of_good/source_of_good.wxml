@@ -1,0 +1,140 @@
+<!--pages/views/rent_seeking/rent_seeking.wxml-->
+<!-- 上方导航栏 start -->
+<view class='classify'>
+  <view class='nav flex'>
+    <view class="nav-son {{ showNavIndex == 1 ? 'active' : ''}}" bindtap='universityList' data-nav='1'>
+      <view class='content'>{{university}}</view>
+      <view class="icon {{universityRotateStart ? 'rotateTriangleOpen icon2' : 'rotateTriangleClose'}} "></view>
+    </view>
+    <view class="nav-son {{ showNavIndex == 2 ? '' : ''}}" bindtap='foodList' data-nav='2'>
+      <view class='content'>{{food}}</view>
+      <view class="icon {{foodRotateStart ? 'rotateTriangleOpen icon2' : 'rotateTriangleClose'}}"></view>
+    </view>
+    <!-- <view class="nav-son {{ showNavIndex == 3 ? '' : ''}}" bindtap='rentList' data-nav='3'>
+      <view class='content'>{{infoType}}</view>
+      <view class="icon {{rentRotateStart ? 'rotateTriangleOpen icon2' : 'rotateTriangleClose'}}"></view>
+    </view> -->
+    <view class="nav-son {{ showNavIndex == 4 ? 'active' : ''}}" bindtap='sortList' data-nav='4'>
+      <view class='nav_sort'>
+        <image class="sort_pic" src='/images/paixu10.png' mode='aspectFit'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 点击学校弹出 -->
+  <view class="navContent {{universityListOpen ? 'listShow' : 'listClose'}} {{universityListClose ? 'disappear' : ''}}">
+    <view class="universityList">
+      <view class="Name {{select1 == index ? 'current' : ''}} " wx:for="{{universityName}}" bindtap="selectUniversity" data-current_university='{{index}}'>
+        {{index}}
+      </view>
+    </view>
+    <view class="campusList">
+      <view class="Name {{select2 == item ? 'current' : ''}}" wx:for="{{campus}}" bindtap="selectCampus" data-current_campus='{{item}}' wx:key="unique">
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <!-- 点击物品类型弹出 -->
+  <view class="navContent {{foodListOpen ? 'listShow' : 'listClose'}} {{foodListClose ? 'disappear' : ''}}">
+    <view class="foodList">
+      <view class="Name {{select1 == item ? 'current' : ''}}" wx:for="{{foodName}}" bindtap="selectType" data-current_food='{{item}}'>
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <!-- 点击类型弹出 -->
+  <view class="navContent {{rentListOpen ? 'listShow' : 'listClose'}} {{rentListClose ? 'disappear' : ''}}">
+    <view class="rentList ">
+      <view class="Name {{select1 == item ? 'current' : ''}}" wx:for="{{rentName}}" bindtap="selectRent" data-current_rent='{{item}}'>
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <!-- 点击租金排序弹出 -->
+  <view class="navContent {{sortListOpen ? 'listShow' : 'listClose'}} {{sortListClose ? 'disappear' : ''}}">
+    <view class="sortList flex">
+      <view class="Name {{select1 == item ? 'current' : ''}}" wx:for="{{sortName}}" bindtap="selectSort" data-current_sort='{{item}}'>
+        {{item}}
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 上方导航栏 end -->
+<!-- 加载动画 -->
+<view class="{{loadingGif ? 'loading-pic' : 'disappear'}}">
+
+  <image src='/static/img/load1.gif'></image>
+  <view class='fill'>
+    <text>加载中</text>
+  </view>
+</view>
+
+<scroll-view class="{{loadingGif ? 'disappear' : 'content'}}" style='height: 92vh;' scroll-y='true' bindscrolltolower="scrolltolower">
+  <block wx:for="{{requirementList}}">
+    <view wx:if="{{(item.selectdIndexType==selectType || selectType=='不限') && (item.university==universityFilter || universityFilter=='不限') && (item.campus==campusFilter || campusFilter=='不限')}}" class='rent_message' bindtap='turn_to_rent_detal' data-itemData='{{item}}'>
+      <view class="above flex">
+        <!-- 头像和名字 -->
+        <view class='item-left flex'>
+          <view class='pic'>
+            <image class="head_pic" src='{{item.avatarUrl}}' style="" mode='aspectFit'></image>
+          </view>
+          <view class='name'>
+            <text wx:if="{{item.nickName!=''}}" class='renter_name'>{{item.nickName}}</text>
+          </view>
+        </view>
+
+      </view>
+      <!-- 标签部分 -->
+      <view class='middle flex'>
+        <view class='label'>
+          <text wx:if="{{item.selectdIndexType!=''}}" class='text'>{{item.selectdIndexType}}</text>
+        </view>
+
+        <view class='label'>
+          <text wx:if="{{item.university!=''}}" class='text'>{{item.university}}</text>
+        </view>
+        <view class='label'>
+          <text wx:if="{{item.university!=''}}" class='text'>{{item.campus}}</text>
+        </view>
+        <view class='label'>
+          <text wx:if="{{item.unit!='其他'}}" class='text'>{{item.unit}}</text>
+          <text wx:if="{{item.rental!=''}}" class='text'>{{item.rental}}元</text>
+        </view>
+      </view>
+      <view class='below'>
+        <!-- 物品描述 -->
+        <view class='rent_detials'>
+          <view wx:if="{{item.selectdIndexType!=''}}" class='text'>
+            {{item.goodsDescription}}
+          </view>
+          <view class='rent_details_pic flex'>
+            <view wx:for="{{item.src}}" wx:for-item="picItem">
+              <image src='{{picItem}}' mode='aspectFill' data-idx="{{index}}" bindtap="handleImagePreview"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 注意，这个要设置自动变化行的！ -->
+      <view class='information_type'>#闲置出租</view>
+      <view class='time '>
+        <text wx:if="{{item.submitTime!=''}}">{{item.submitTime}}</text>
+      </view>
+    </view>
+
+  </block>
+  <view class="{{ downGif ? 'downGif' : 'disappear'}}">
+    <!-- <view class='downGif'> -->
+    <view>
+      <image src='/static/img/load2.gif' mode='aspectFill'></image>
+    </view>
+  </view>
+  <view class="{{ noData ? 'noData' : 'disappear'}}">
+    <text>没有更多的数据了</text>
+  </view>
+
+
+</scroll-view>
+<view class="{{loadingGif ? 'disappear' : 'uploadBt'}}" bindtap='uploadGood'>
+  <image src='/images/shangchuan2.png'></image>
+  <text class='uploadWorld'>上传物品</text>
+</view>

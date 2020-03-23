@@ -1,0 +1,63 @@
+/* pages/collections/collections.wxss */
+/*最新产品-区块标题*/
+.line_y{
+  width: 3px;
+  height: 18px;
+  display: inline-block; 
+  background-color:  darkcyan;  
+}
+view.text
+{
+  display: flex;
+  align-items: center;
+  position: relative; 
+  padding: 6px 6px 6px 6px ; 
+  background-color:  lightgoldenrodyellow;
+}
+view.text text{ 
+  margin-left: 6px;
+}
+
+
+
+
+/* 1行2列：左图片，右文字（多行文字） */
+
+.line{
+    display: flex;
+    margin: 1rpx;
+    border: #ddd solid 1px;
+    padding: 10rpx;
+}
+
+.toutiao-img{
+    width: 80px;
+    height: 80px;
+}
+.two-line-text{
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.text-center{
+    margin: 0 auto;
+}
+
+.txt1{
+    margin: 3px 3px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap; color:  #09bb07;
+}
+.txt2{
+    margin: 3px 3px;
+    font-size: 13px;
+     color: #656565;
+    white-space: nowrap;
+}
+.txt3{
+    margin: 3px 3px;
+    font-size: 13px;
+    color: #656565;
+    white-space: nowrap;
+}

@@ -1,0 +1,8 @@
+<!--pages/views/feedbackDetail/feedbackDetail.wxml-->
+<block wx:for="{{feedbackList}}">
+  <view class='all'>
+    <view class='first_line'>{{index+1}}</view>
+    <view>标题：{{item.title}}</view>
+    <view>内容：{{item.text}}</view>
+  </view>
+</block>

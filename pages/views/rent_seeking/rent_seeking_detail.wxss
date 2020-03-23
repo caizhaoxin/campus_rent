@@ -1,0 +1,345 @@
+/* pages/views/rent_seeking/rent_seeking_detail.wxss */
+Page{
+  background: rgb(255, 254, 251);
+}
+/* 顶部导航栏 */
+.nav {
+ 
+ z-index: 99;
+ display: flex;
+ border-top: 1px solid #d1d3d4;
+ border-bottom: 1px solid #d1d3d4;
+ background: #fff;
+}
+.border-bottom{
+  border-bottom: 1rpx solid rgb(233, 233, 233);
+}
+
+.content{
+  font-size: 28rpx;
+  color: #000000;
+  width: 70%;
+  /* letter-spacing: 2rpx; */
+}
+
+/* 头像规格 */
+
+.head_pic {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  margin-left: 15rpx;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 求租信息部分 */
+.rent_message {
+  padding: 0 40rpx;
+}
+
+.rent_message .name {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+
+}
+.rent_message .university_name{
+  font-size: 25rpx;
+  margin: 5rpx;
+  color: #14446a;
+}
+/* 上部分（个人信息） */
+.above {
+  height: 120rpx;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 30rpx;
+}
+
+ .rent_message {
+  background-color:	rgb(255, 254, 251);
+}
+
+.rent_message .above .name {
+  font-size: 30rpx;
+}
+
+.rent_message .collect {
+  font-size: 30rpx;
+  color: #BDBDBD;
+  margin-right: 10rpx;
+}
+.rent_message .collect image{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+
+/* 中间部分（标签） */
+
+ .middle {
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10rpx 0;
+}
+
+.label {
+  border: 1px solid #14446a;
+  border-radius: 5px;
+  font-size: 25rpx;
+  color: #14446a;
+  margin: 5rpx 5rpx;
+}
+
+.label .text {
+  margin: 2rpx 10rpx;
+}
+/* 下面部分 */
+
+.below {
+  margin-top: 20rpx;
+  border-top:  1px solid rgb(233, 233, 233);
+}
+
+.below .rent_detials {
+  padding-bottom: 10rpx;
+}
+
+/* .below .rent_detials text {
+  font-size: 30rpx;
+  color: #000;
+  line-height: 33rpx;
+ 
+} */
+.below .rent_detials  .describe{
+  margin-bottom: 30rpx;
+  display: flex;
+
+}
+.rent_details_pic{
+  flex-wrap: wrap;
+  margin-top: 3rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.time{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #353535;
+}
+.tips{
+  padding: 0 40rpx;
+  flex-direction: column;
+  border-top: 1px solid rgb(233, 233, 233);
+  margin-top: 80rpx;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+.tips image{
+  margin-right: 625rpx;
+  padding-top: 20rpx;
+}
+.tips .title{
+  margin: 0 auto;
+  color: rgb(173, 173, 173);
+  font-size: 30rpx;
+  margin-top: 60rpx;
+  margin-bottom: 40rpx;
+}
+
+.tips_detail{
+  
+  color: rgb(189, 186, 186);
+  font-size: 25rpx;
+  margin-bottom: 80rpx;
+  line-height: 40rpx;
+}
+
+.information_type{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  line-height: 80rpx;
+  height: 80rpx;
+  vertical-align: center;
+  margin-top: 10rpx;
+  /* border-top: 1rpx solid rgb(233, 233, 233); */
+  
+}
+.information_type .type_title{
+  width: 30%;
+  font-size: 28rpx;
+  color: #000;
+}
+.information_type .type_name{
+  font-size: 28rpx;
+  color: #14446a;
+}
+
+/* 求租人信息 */
+.renter_information{
+  display: flex;
+  flex-direction: column;
+  padding:0 40rpx;
+  border-top: 1rpx solid rgb(233, 233, 233);
+  margin-top: 20rpx;
+}
+ .line{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  line-height: 80rpx;
+  height: 80rpx;
+  vertical-align: center;
+  border-bottom: 1rpx solid rgb(233, 233, 233);
+  
+}
+.renter_information .line{
+  margin: 0 30rpx;
+}
+.renter_information .title{
+  width: 35%;
+  color: #545454;
+  font-size: 28rpx;
+}
+.renter_information .content{
+  font-size: 28rpx;
+  color: #000000;
+}
+.title{
+  width: 30%;
+  color: #545454;
+  font-size: 28rpx;
+}
+/* 底部 */
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8vh;
+  border-top:  1px solid rgb(233, 233, 233);
+  
+  justify-content: space-around;
+  z-index: 99;
+}
+.footer button{
+  width: 90%;
+  height: 8vh;
+  margin-top: 1vh; 
+  margin-bottom: 1vh;
+  background: #14446a;
+  font-size: 40rpx;
+  
+}
+
+.footer .pic{
+  flex-direction: column;
+}
+.footer .pic image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.footer .pic text{
+  margin-top: 5rpx;
+  font-size: 18rpx;
+  color: #757575;
+}
+/* 左上角的图标规格 */
+.img{
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+  
+}
+.renter_information .img{
+  margin-left: -20rpx;
+}
+.img image{
+  width: 96rpx;
+  height: 54rpx;
+
+}
+.img text{
+  color: #14446a;
+  font-size: 25rpx;
+  margin-left: 12rpx;
+}
+
+
+.footer-nav-content{
+  z-index: 999;
+  border: 1prx solid #000;
+  background: rgb(255, 254, 251);
+  position: absolute;
+  width: 100%;
+  bottom: 8vh;
+
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 80rpx;
+  vertical-align: center;
+  font-size: 30rpx;
+}
+.footer-nav-content .flex-column view{
+  border-bottom: 1px solid rgb(233, 233, 233);
+  width: 80%;
+  align-items: center;
+}
+.align-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.disapper{
+  display: none;
+}
+
+/* 菜单的收入弹出 */
+.listShow{
+ z-index: 5;
+ display: block;
+ animation: listShow 0.15s ease-in both;
+}
+@keyframes listShow {
+ from {
+ transform: translateY(15vh);
+ }
+ 
+ to {
+ transform: translateY(0%);
+ }
+}
+.listClose{
+  display: block;
+  animation: listClose 0.2s ease-in both;
+}
+@keyframes listClose {
+ from {
+ transform: translateY(0);
+ }
+ 
+ to {
+ transform: translateY(40vh);
+ }
+}
+
+/* 管理员删除数据按钮 */
+.manager-del{
+  color: #FFF;
+  background: #14446a;
+  width: 80%;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}

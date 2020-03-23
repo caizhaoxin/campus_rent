@@ -1,0 +1,6 @@
+<view class='back'>
+  <view class='title'>发布成功!</view>
+  <image src='/static/img/back.jpg' mode='aspectFill'></image>
+  <view class='border-bottom'></view>
+  <button class='bt ' bindtap='back'>返回</button>
+</view>

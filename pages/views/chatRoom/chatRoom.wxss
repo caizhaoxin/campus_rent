@@ -1,0 +1,88 @@
+/* pages/contact/contact.wxss */
+
+page {
+  background: rgb(255, 254, 251);
+}
+
+
+.leftMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+.rightMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96eb6a;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+/* 每一行 */
+
+.left-line {
+  display: flex;
+  padding: 2vw 11vw 2vw 2vw;
+}
+
+.left-head-pic {
+  width: 11vw;
+  height: 11vw;
+}
+
+.left-head-pic image{
+  width: 11vw; height: 11vw; border-radius: 10rpx;
+}
+
+.interval{
+  width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;
+}
+
+.right-line{
+  display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;
+}
+
+/* 发送按钮 */
+.bt{
+  background: #14446a;
+  width: 15vw;
+  height: 9.33vw;
+  color: #FFF;
+  font-size: 28rpx;
+  vertical-align: center
+}
+
+
+
+.inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: rgb(255, 254, 251);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  margin-left: 1vw;
+}
+
+input {
+  width: 69vw;
+  height: 9.33vw;
+  background-color: #E6E8FA ;
+  border-radius: 40rpx;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 28rpx;
+  color: #444;
+}

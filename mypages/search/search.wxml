@@ -1,0 +1,10 @@
+
+<view class="container">
+  <view class="search">
+    <view class='searchItem'>
+       <icon type="search" size='20'></icon>
+      <input placeholder='请输入物品名称' ></input>
+    </view>
+  </view>
+  <text>搜索历史</text>
+</view>

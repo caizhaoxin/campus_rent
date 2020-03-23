@@ -1,0 +1,16 @@
+/* pages/views/cart/cart.wxss */
+/* 购物车底部 开始 */
+@import"../../../widget/cart-footer/cart-footer.wxss";
+/* 购物车底部 结束 */
+
+/* 购物车清单 开始 */
+@import"../../../widget/cart-list/cart-list.wxss";
+
+.list{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ececec;
+}
+/* 购物车清单 结束 */

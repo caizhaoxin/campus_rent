@@ -1,0 +1,29 @@
+@import "../../widget/search_box/search_box.wxss";
+@import "../../widget/item-list/item-list.wxss";
+
+.view-sort {
+  color: #404040;
+  background-color: #E6E8FA;
+}
+
+.view-sort .cont {
+  display: flex;
+  margin-top: 110rpx;
+}
+
+.view-sort .cont .list view {
+  letter-spacing: 2rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+}
+
+.view-sort .cont .list view.current {
+  background-color: #FFF;
+  color: #f5692e;
+}
+
+.view-sort .cont .result{
+  width: 550rpx;
+  background-color: #FFF;
+}

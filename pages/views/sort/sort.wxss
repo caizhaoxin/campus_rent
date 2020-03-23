@@ -1,0 +1,106 @@
+/* pages/views/sort/sort.wxss */
+page{
+  background-color:  #E6E8FA;
+}
+.allContainer{
+  display: block;
+  
+}
+/* 搜索框 开始 */
+@import"../../../widget/search_box/search_box.wxss";
+/* 搜索框 结束 */
+
+/* 内容 开始 */
+.container {
+  border-top: 1px solid #E6E8FA;
+  box-sizing: border-box;
+  background-color:#f4f4f4;
+}
+.flex-wrap{
+  display: flex;
+}
+.flex-item{
+  flex: 1;
+}
+.flex-wrap .flex-direction-col{
+  flex-direction: column;
+}
+.flex-wrap .flex-direction-row{
+  flex-direction: row;
+}
+
+/* 详情 开始 */
+.cps{
+  display: flex;
+  flex-wrap: wrap;
+}
+.cp-item{
+  width: 30%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin: 2px;
+  padding: 2px;
+}
+.cp-item .cp-image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 1px;
+  padding: 1px;
+}
+.cp-item text{
+  padding-top: 10rpx;
+  font-size: 25rpx;
+  text-align: left;
+  width: 100%;
+}
+/*  */
+
+ .aside{
+  width: 15vh;
+  border-right: 2px solid #E6E8FA;
+  font-size: .85rem;
+  height: 100%;
+  background: #fff;
+} 
+.type-nav{
+  position: relative;
+  padding: .7rem .3rem;
+  text-align: center;
+  background-color:#fff;
+  /* height: 7vh; */
+  border: 0;
+  border-radius: 0%;
+  z-index: 1;
+}
+.selected{
+  margin-right: -1px;
+  padding-left: -1px;
+  color:tomato;
+  background: #E6E8FA;
+}
+.content{
+  background: #FFF;
+}
+
+/* 内容 结束 */
+
+/*评价*/
+.group{
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+ 	  box-sizing: border-box;
+   	background: #f9f9f9; font-size: 14px;
+}
+.group-header{
+	line-height: 70rpx;
+	display: flex;
+	padding: 0 20rpx;
+	background: #f9f9f9;
+}
+.group-body{
+	background: #fff;
+	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd; padding: 5rpx 20rpx;
+}

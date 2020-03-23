@@ -1,0 +1,88 @@
+<!--header-->
+<import src="loginButton.wxml"/>
+<import src="picture.wxml"/>
+
+<view class = 'user-head'>
+<image src = "../../images/login.jpg" class = 'mine-bg'></image>
+  <view class='user-login'>
+  <template is="{{loginChange}}" data="{{userInfo}}"> </template>
+  </view>
+</view>
+
+<!-- nav -->
+<view class = 'user-nav'> 
+  <view class = 'nav-list'>
+    <navigator url='/pages/views/collection/collection' hover-class='none' >
+      <image src='../../images/collection1.png'></image>
+      <view class='nav-name'>收藏</view>
+    </navigator>
+  </view>
+
+  <view class='nav-list'>
+    <navigator url='/pages/views/upload/myUpload/myUpload' hover-class='none'>
+      <image src='../../images/order-icon.png' class='order-pic'></image>
+      <view class='nav-name'>已发布</view>
+    </navigator>
+  </view>
+
+  <view class='nav-list'>
+    <navigator url='/pages/views/feedback/feedback' hover-class='none'>
+      <image src='../../images/appraise-icon.png'></image>
+      <view class='nav-name'>意见反馈</view>
+      </navigator>
+  </view>
+</view>
+
+<!-- option-list -->
+<view class='option-cont'>
+  <navigator url='/pages/views/upload/Upload_good/Upload_good'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../images/sign-icon.png'></image>
+        <text class='option-name'>发布物品信息</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../images/enter-icon.png'></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator url='/pages/views/upload/upload_rentSeeking_message/upload_rentSeeking_message'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../images/sign-icon.png'></image>
+        <text class='option-name'>发布求租信息</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../images/enter-icon.png'></image>
+      </view>
+    </view>
+  </navigator>
+<navigator url='/mypages/about/about'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../images/about-icon.png'></image>
+        <text class='option-name'>关于我们</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../images/enter-icon.png'></image>
+      </view>
+    </view>
+</navigator>
+<navigator wx:if="{{isManager==1}}" url='/pages/views/feedbackDetail/feedbackDetail'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../images/about-icon.png'></image>
+        <text class='option-name'>管理员查看意见</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../images/enter-icon.png'></image>
+      </view>
+    </view>
+</navigator>
+    <view wx:if="{{loginChange!='loginButton'}}"  class='option-list' bindtap='logOut'>
+      <view class='left-list'>
+        <image src='../../images/exit.jpg'></image>
+        <text class='option-name'>退出登录</text>
+      </view>
+    </view>
+</view>

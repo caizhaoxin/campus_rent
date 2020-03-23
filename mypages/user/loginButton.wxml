@@ -1,0 +1,3 @@
+<template name = 'loginButton'>
+<button class="LoginButton" open-type='getUserInfo' bindgetuserinfo='bindGetuserInfo' type='primary' >登录</button>
+</template>

@@ -1,0 +1,75 @@
+{
+  "pages": [
+    
+    "pages/views/source_of_good/source_of_good",
+    "pages/views/upload/myUpload/myUpload",
+    "mypages/index/index",
+    "mypages/about/about",
+    "mypages/test/test",
+    "mypages/search/search",
+    "mypages/user/user",
+    "mypages/subGoods/subGoods",
+    "pages/views/feedbackDetail/feedbackDetail",
+    "views/sort/sort",
+    "pages/views/sort/sort",
+    "pages/views/cart/cart",
+    "pages/details/details",
+    "pages/myRequirement/myRequirement",
+    "pages/collections/collections",
+    "pages/subRequirement/subRequirement",
+    "pages/views/rent_seeking/rent_seeking_detail",
+    "pages/views/upload/upload_rentSeeking_message/upload_rentSeeking_message",
+    "pages/views/collection/collection",
+    "pages/views/upload/Upload_good/Upload_good",
+    "pages/views/source_of_good_detail/source_of_good_detail",
+    "pages/views/rent_seeking/rent_seeking",
+    "pages/views/chatRoom/chatRoom",
+    "pages/views/back/back",
+    "pages/views/feedback/feedback",
+    "pages/views/user/user",
+    "pages/views/chatList/chatList",
+    "pages/views/about/about",
+    "pages/views/help/help"
+    
+  ],
+  "tabBar": {
+    "boderStyle": "white",
+    "backgroundColor": "#fff",
+    "color": "#757575",
+    "selectedColor": "#14446a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "images/wupinyuan2.png",
+        "selectedIconPath": "images/wupinyuan.png",
+        "pagePath": "pages/views/source_of_good/source_of_good",
+        "text": "物品源"
+      },
+      {
+        "iconPath": "images/qiuzu7.png",
+        "selectedIconPath": "images/qiuzu7_74.png",
+        "pagePath": "pages/views/rent_seeking/rent_seeking",
+        "text": "求租"
+      },
+      {
+        "iconPath": "images/wode2.png",
+        "selectedIconPath": "images/wode4.png",
+        "pagePath": "pages/views/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true,
+  "window": {
+    "navigationBarTitleText": "租租网",
+    "navigationBarBackgroundColor": "#14446a",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#14446a"
+  },
+  "netwoorkTimeout": {
+    "request": 100,
+    "connectSocket": 100
+  }
+}

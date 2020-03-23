@@ -1,0 +1,13 @@
+<block wx:for = "{{requirementList}}">
+  <view class="food">
+    <image class="img" src="{{userImage}}"></image>
+      <view class="food-info">
+        <view class="sales">最高预算：<view class="price">{{requirementList.maxRentBudget}}</view> / {{requirementList.unit}}</view>
+        <view class="name">{{requirementList.requirementText}}</view>
+        <view class="name">租用时间{{requirementList.wantToRentTime}}</view>
+      </view>
+      <view class="food-numb">
+        <text class="mytext" hidden=""> {{requirementList.interval}} </text>
+      </view>
+  </view>
+</block>

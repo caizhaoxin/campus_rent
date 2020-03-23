@@ -1,0 +1,11 @@
+<template name = 'search-box'>
+  <view class='search-box' style=''>
+    <view class='box-cont' bindtap='{{tapEvent}}'>
+      <icon class='icon search'></icon>
+      <view class='input' wx::if = "{{!showInput}}">搜索租租网商品</view>
+      <input class='input' wx::else auto-focus='{{autoFoucus}}' placeholder='搜索租租网商品' 
+      bindblur='{{bindEvent}}'></input>
+    </view>
+  </view>
+
+</template>

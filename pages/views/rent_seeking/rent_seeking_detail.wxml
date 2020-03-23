@@ -1,0 +1,132 @@
+<view wx:if="{{noDataMes==''}}">
+ <scroll-view scroll-y="true" style='height: 92vh'>
+  <view class='rent_message'>
+    <view class="above flex">
+      <view class='item-left flex'>
+        <view class='pic'>
+          <image class="head_pic" src='{{detailDate.avatarUrl}}' style="" mode='aspectFit'></image>
+        </view>
+        <view class='name'>
+          <text>{{detailDate.nickName}}</text>
+        </view>
+      </view>
+
+
+
+      <view wx:if="{{isCollectionPage==0}}" class='collect item-right' bindtap='store'>
+        <image wx:if="{{isCollected==0}}" src='/images/aixin2.png'></image>
+        <image wx:else src='/images/aixin2_2.png'></image>
+      </view>
+    </view>
+    <view class='time'>
+      <text>{{detailDate.submitTime}}</text>
+    </view>
+    <view class='below'>
+     <view class='img'>
+          <image src='/images/miaoshu1.png' mode='scaleToFill' style=' width: 72rpx; height: 43.5rpx;'></image>
+          <text>需求描述</text>
+        </view>
+        
+      <view class='rent_detials'>
+       <view class='describe'>
+          <text class='title'>详细描述</text>
+          <text class='content'>{{detailDate.requirementText}}</text>
+          
+        </view>
+        <view  wx:if="detailDate.src != ''"  class='border-bottom'></view>
+        <view wx:if="detailDate.src != ''" class='line'>
+          <view class='title'>图片详情</view>
+        </view>
+
+        <view wx:for="{{detailDate.src}}" wx:for-item="picItem" class='rent_details_pic flex'>
+          <image src='{{picItem}}' mode='aspectFill' data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        </view>
+      </view>
+      <view class='information_type'>
+        <text class='type_title'>类型标签</text>
+        <text class='type_name'>#物品求租</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='renter_information'>
+    <view class='img'>
+      <image src='/images/xiangqing.png' mode='scaleToFill'></image>
+      <text>交易信息</text>
+    </view>
+    <view class='line'>
+      <text class='title'>联系人</text>
+      <text class='content'>{{detailDate.linkmanName}}</text>
+    </view>
+    <view class='line'>
+      <text class='title'>交易地点</text>
+      <text class='content'>{{detailDate.university}} {{detailDate.campus}}</text>
+    </view>
+
+    <view class='line'>
+      <text class='title'>物品类型</text>
+      <text class='content'>{{detailDate.selectdIndexType}}</text>
+    </view>
+    <view class='line'>
+      <text class='title'>租金预算</text>
+      <text class='content'>{{detailDate.rental}}元</text>
+    </view>
+    <view class='line'>
+      <text class='title'>租期</text>
+      <text class='content'>{{detailDate.selectedStartDate}} 租到 {{detailDate.selectedEndDate}}</text>
+    </view>
+  </view>
+
+  <view class='tips flex'>
+    <image src='/images/zhuyi.png' style='width: 15px; height: 15px; '></image>
+    <view class='title'>- 温馨提示 -</view>
+    <view class='tips_detail'>本租赁平台信息由发布者自行发布，仅代表其个人，与租租网平台无关。租租网平台仅提供信息展示空间，不保证发布者信息的真是、合法、有效。你应与发布者确认并核实求租信息等相关情况。租租网提醒您，在查看物品信息以及租赁相关物品时注意人身及财产安全！</view>
+  </view>
+<!-- 管理员删除按钮 -->
+<button class='manager-del' wx:if="{{isManager==1}}"  bindtap='deleteSubmit'>删除</button>
+    
+</scroll-view>
+
+
+<!-- 下方导航栏弹起 -->
+  <view class="footer-nav-content {{footer_nav_index == 1 ? 'listShow' : 'disapper'}}">
+  <view class='flex-column'>
+    <view class='align-center '>
+      <text wx:if="{{detailDate.wxID==''}}">无</text>
+      <text wx:else>{{detailDate.wxID}}</text>
+    </view>
+    <view class='align-center '>
+      <text wx:if="{{detailDate.wxID!=''}}" bindtap='wxIDCopy'>复制</text>
+    </view>
+  </view>
+</view>
+<view class="footer-nav-content {{footer_nav_index == 2 ? 'listShow' : 'disapper'}}">
+  <view class='flex-column'>
+    <view class='align-center'>
+      <text wx:if="{{detailDate.phoneNumber==''}}">无</text>
+      <text wx:else>{{detailDate.phoneNumber}}</text>
+    </view>
+    <view class='align-center'>
+      <text wx:if="{{detailDate.phoneNumber!=''}}" bindtap='makeCall'>呼叫</text>
+    </view >
+  </view>
+</view>
+
+<view class='footer flex'>
+  <view class='pic flex' data-footer_nav_index = '1' bindtap='select_footer_nav1'>
+    <image src='/images/weixin5.png'></image>
+    <text>微信</text>
+  </view>
+  <view class='pic flex' data-footer_nav_index = '2'bindtap='select_footer_nav2'>
+    <image src='/images/dianhua.png'></image>
+    <text>电话</text>
+  </view>
+  <view class='pic flex private_chart' bindtap='trun_to_charRoom' data-footer_nav_index = '3'>
+    <image src='/images/siliao2.png'></image>
+    <text>私信</text>
+  </view>
+</view>
+
+</view>
+<view wx:else>{{noDataMes}}</view>

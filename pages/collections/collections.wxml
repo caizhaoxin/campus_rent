@@ -1,0 +1,33 @@
+<!--pages/collections/collections.wxml-->
+<!--销售排行-1行2列-->
+<view class='text'>
+  <view class='line_y'></view>
+  <text>我的收藏列表</text>
+</view>
+  <view class='line toutiao'>
+    <image class="toutiao-img" src='/img/cp01.jpg' />
+    <view class='two-line-text'>
+      <text class='text-center txt1'>妮维雅晶纯皙白泡沫洁面乳</text>
+      <text class="text-center txt2">150g加量装(洗面奶 护肤化妆品</text>
+      <text class="text-center txt2">¥：368 | 租期 : 10日 </text>
+      
+    </view>
+  </view>
+
+  <view class='line toutiao'>
+    <image class="toutiao-img" src='/img/cp02.jpg' />
+    <view class='two-line-text'>
+      <text class='text-center txt1'>御泥坊 亮颜补水面膜贴21片</text>
+      <text class="text-center txt2">补水保湿面膜 亮肤淡斑 晒后修护 </text>
+      <text class="text-center txt2">¥：568 | 租期 : 10日</text>
+    </view>
+  </view>
+
+  <view class='line toutiao'>
+    <image class="toutiao-img" src='/img/cp03.jpg' />
+    <view class='two-line-text'>
+      <text class='text-center txt1'>自然堂女雪域精粹系列</text>
+      <text class="text-center txt2">乳液【活力冰肌礼盒】</text>
+      <text class="text-center txt2">¥：897 | 租期 : 10日</text>
+    </view>
+  </view>    

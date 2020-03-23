@@ -1,0 +1,171 @@
+<!-- 登录按钮 -->
+<view wx:if="{{loginChange=='loginButton'}}">
+  <button class="loginButton" open-type='getUserInfo' bindgetuserinfo='bindGetuserInfo'>登录</button>
+</view>
+<!-- 退出按钮 -->
+<view wx:if="{{loginChange!='loginButton'}}" class='exit' bindtap='logOut'>
+  <image class='exit-icon' src='/images/user-tuichu2.png'></image>
+</view>
+<!-- 头像 -->
+
+
+
+<view class='box'>
+  <view class='bk1'>
+
+  </view>
+  <view class='bk2 head-pic-type line space-between'>
+    <view class='head-left'>
+    </view>
+    <view class='box head-middle'>
+      <!-- 头像 -->
+      <image wx:if="{{loginChange=='picture'}}" class='head-pic' src='{{userInfo.avatarUrl}}' mode='aspectFill'></image>
+      <view class='nickNmae'>
+        <!-- 名字 -->
+        <text class='user-name' wx:if="{{loginChange=='picture'}}">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='head-right  '>
+      <!-- 登录之后才有得显示 -->
+      <view wx:if="{{loginChange!='loginButton'}}" class='line identify'>
+        <!-- 如果是管理员则显示这个 -->
+        <block wx:if="{{isManager==1}}">
+          <image class="id-pic" src='/images/user-huangguan.png'></image>
+          <text class='label'>超级管理员</text>
+        </block>
+        <block wx:else>
+          <image class="id-pic" src='/images/user-xingxing.png'></image>
+          <text class='label'>普通会员</text>
+        </block>
+
+      </view>
+
+    </view>
+  </view>
+  <view class='bk3 flex-row space-around;'>
+    <view class='box head-left '>
+      <navigator url='/pages/views/collection/collection' hover-class='none' class='box'>
+        <image class="nav-icon" src='/images/user-shoucangjia.png'></image>
+        <view class='nav-name'>收藏夹</view>
+      </navigator>
+    </view>
+    <view class='box head-middle'>
+      <navigator url='/pages/views/upload/myUpload/myUpload' hover-class='none' class='box'>
+        <image class="nav-icon" src='/images/user-yifabu.png'></image>
+        <view class='nav-name'>已发布</view>
+      </navigator>
+
+    </view>
+    <view class='box head-right'>
+      <navigator url='/pages/views/chatList/chatList' hover-class='none' class='box'>
+        <image class="nav-icon" src='/images/user-sixin.png'></image>
+        <view class='nav-name'>私信</view>
+      </navigator>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view class='box '>
+  <view class='list'>
+    <!-- 发布信息 -->
+    <view class='line border-bottom '>
+      <text class='list-title'>我要发布</text>
+    </view>
+
+    <navigator url='/pages/views/upload/Upload_good/Upload_good'>
+      <view class='line border-bottom'>
+        <view class='list-left '>
+          <image class='list-icon' src='/images/user-xianzhiwupin.png'></image>
+        </view>
+        <view class='list-right'>
+          <view class='list-name'>闲置出租</view>
+          <view class='list-name'> > </view>
+        </view>
+      </view>
+      </ navigator>
+
+      <navigator url='/pages/views/upload/upload_rentSeeking_message/upload_rentSeeking_message'>
+        <view class='line border-bottom '>
+          <view class='list-left'>
+            <image class='list-icon' src='/images/user-qiuzu2.png'></image>
+          </view>
+          <view class='list-right'>
+            <text class='list-name'>求租信息</text>
+            <text class='list-name'> > </text>
+          </view>
+        </view>
+        </ navigator>
+        <!-- 占位用，用于布局 -->
+        <view style='height: 50rpx;'></view>
+  </view>
+</view>
+
+<view class='box '>
+  <view class='list'>
+    <!-- 关于我们 -->
+    <view class='line border-bottom '>
+      <text class='list-title'>我要吐槽</text>
+    </view>
+
+    <navigator url=''>
+      <view class='line border-bottom'>
+        <view class='list-left '>
+          <image class='list-icon' src='/images/user-kefu.png'></image>
+        </view>
+        <view class='list-right'>
+          <view class='list-name'>联系客服</view>
+          <view class='list-name'> > </view>
+        </view>
+      </view>
+      </ navigator>
+
+      <navigator url='/pages/views/feedback/feedback'>
+        <view class='line border-bottom '>
+          <view class='list-left'>
+            <image class='list-icon' src='/images/user-feedback.png'></image>
+          </view>
+          <view class='list-right'>
+            <text class='list-name'>意见反馈</text>
+            <text class='list-name'> > </text>
+          </view>
+        </view>
+        </ navigator>
+        <!-- 占位用，用于布局 -->
+        <view style='height: 50rpx;'></view>
+  </view>
+</view>
+
+
+<view wx:if="{{isManager==1 && loginChange!='loginButton'}}" class='box '>
+  <view class='list'>
+    <!-- 管理员权限 -->
+    <view class='line border-bottom '>
+      <text class='list-title'>管理员权限</text>
+    </view>
+
+    <navigator url='/pages/views/feedbackDetail/feedbackDetail'>
+      <view class='line border-bottom'>
+        <view class='list-left '>
+          <image class='list-icon' src='/images/user-yonghufankui.png'></image>
+        </view>
+        <view class='list-right'>
+          <view class='list-name'>查看反馈</view>
+          <view class='list-name'> > </view>
+        </view>
+      </view>
+      </ navigator>
+
+      <!-- 占位用，用于布局 -->
+      <view style='height: 50rpx;'></view>
+  </view>
+</view>
+
+<!-- 使用帮助 -->
+<view class='help'>
+  <text bindtap='helpMe'>使用帮助</text>
+  <text space="ensp"> | </text>
+  <text bindtap='aboutMe'>关于我们</text>
+</view>

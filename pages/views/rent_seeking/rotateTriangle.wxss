@@ -1,0 +1,22 @@
+
+.rotateTriangle{
+   animation-name: rotateTriangle;
+ animation-duration: 0.2s; /*动画执行快慢的参数*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: 1; /*动画执行多少次的参数*/
+  /*以下是兼容ios所需，参数意义与上相同*/
+  -webkit-animation-name: rotateTriangle;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  
+}
+@keyframes rotateTriangle {
+  /*开始转的角度*/
+  from {
+    transform: rotate(-180deg);
+  }/*结束的角度*/
+  to {
+    transform: rotate(-360deg);
+  }
+}

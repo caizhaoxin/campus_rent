@@ -1,0 +1,23 @@
+<!--pages/views/help/help.wxml-->
+<view class='all'>
+  <view class='line space-between border-bottom'>
+    <text>1.平台规则</text>
+    <text>></text>
+  </view>
+  <view class='line space-between border-bottom'>
+    <text>2.关于发布</text>
+    <text>></text>
+  </view>
+  <view class='line space-between border-bottom'>
+    <text>3.关于收藏</text>
+    <text>></text>
+  </view>
+  <view class='line space-between border-bottom'>
+    <text>4.关于与雇主联系</text>
+    <text>></text>
+  </view>
+  <view class='line space-between border-bottom'>
+    <text>5.关于意见反馈</text>
+    <text>></text>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+.aboutme {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 1000rpx;
+}
+.photo{
+  width: 375rpx;
+  height: 375rpx;
+  border-radius: 50%;
+}
+/*text{
+  display: inline-flex;
+}*/
+#team_name{
+  font-size: 32px;
+
+}
+.team_imformation_font_style{
+  font-size: 10px;
+  color: #ddd
+}

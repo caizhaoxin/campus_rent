@@ -1,0 +1,22 @@
+/* pages/views/help/help.wxss */
+.all{
+  padding-top: 3vh;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  vertical-align: center;
+  padding:0 15rpx;
+}
+.space-between{
+  justify-content: space-between;
+}
+.border-bottom{
+  border-bottom: 1px solid #d1d3d4;
+}

@@ -1,0 +1,343 @@
+/* user */
+
+page {
+  background-color: #e6e8fa;
+
+}
+
+/* 头部 */
+
+.user-head {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 800rpx;
+}
+
+.user-head .user-login {
+  position: absolute;
+  top: 38%;
+  left: 42%;
+}
+
+.user-head .mine-bg {
+  width: 100%;
+  height: 400rpx;
+}
+
+.user-head .user-head-pic-wrap {
+  position: absolute;
+  margin: 0;
+}
+
+.user-head .user-head-pic {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  margin-top: 0rpx;
+}
+
+/* .user-name {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 32rpx;
+  color: #fff;
+  color: red;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} */
+
+/* nav */
+
+.user-nav {
+  display: flex;
+  justify-content: center;
+  padding: 25rpx 0;
+  background-color: #fff;
+}
+
+.nav-list {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-list image {
+  width: 68rpx;
+  height: 68rpx;
+}
+
+.nav-name {
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+
+.nav-list .order-pic {
+  width: 58rpx;
+}
+
+/* optin-list */
+
+.option-cont {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.option-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.option-list .contact-wrap {
+  position: absolute;
+  left: 0;
+  top: 28%;
+  opacity: 0;
+}
+
+.left-list {
+  display: flex;
+  align-items: center;
+}
+
+.option-list image {
+  width: 40rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.option-list .option-name {
+  display: inline-block;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.right-list image {
+  width: 20rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+
+/* pages/views/user/user.wxss */
+
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bk1 {
+  background: #14446a;
+  width: 100%;
+  height: 21vh;
+}
+
+.bk2 {
+  background: #FFF;
+  width: 85%;
+  height: 10vh;
+  margin-top: -10vh;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.bk3 {
+  background: #FFF;
+  width: 85%;
+  height: 12vh;
+  border-radius: 0 0 10rpx 10rpx;
+  box-shadow: 5rpx 5rpx 2rpx #888;
+}
+
+.head-pic {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  margin-top: -75rpx;
+  border: 10rpx solid #FFF;
+}
+
+.head-pic-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boder-bottom {
+  height: 1rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #353535;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.nickNmae {
+  font-size: 28rpx;
+  color: #353535;
+  line-height: 30rpx;
+  vertical-align: center;
+  height: 30rpx;
+}
+
+.bk4 {
+  background: #FFF;
+  border: 30rpx solid #e6e8fa;
+  height: 300rpx;
+  width: 95%;
+  margin-top: 30rpx;
+}
+
+.head-left {
+  width: 33%;
+}
+
+.head-middle {
+  width: 33%;
+}
+
+.head-right {
+  width: 33%;
+}
+
+.id-pic {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+}
+
+.label {
+  color: #fff;
+  font-size: 20rpx;
+  vertical-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 10rpx;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* .float-right{
+  display: float;
+  float: right;
+} */
+
+.identify {
+  margin-top: -10vh;
+  margin-left: -2vh;
+}
+
+.nav-icon{
+  width: 50rpx;
+  height: 50rpx;
+
+}
+.nav-name{
+  font-size: 25rpx;
+  color: #353535;
+}
+
+.list-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.border-bottom{
+  border-bottom: 1px solid #d1d3d4;
+}
+
+.list{
+  width: 90%;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-radius:10rpx;
+  box-shadow: 5rpx 5rpx 2rpx #888;
+}
+.list .line{
+  width: 85%;
+  margin: 0 auto;
+  height: 80rpx;
+}
+.list-title{
+  color: #14446a;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.list-name{
+  color: #353535;
+  font-size: 26rpx;
+}
+.list-left{
+  width: 12%;
+  margin-left: 3%;
+}
+.list-right{
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.help{
+
+  color: #14446a;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75rpx;
+  vertical-align: center;
+  line-height: 80rpx;
+}
+.exit-icon{
+  width: 35rpx;
+  height: 35rpx;
+
+}
+
+.exit{
+  position: absolute;
+  top: 13vh;
+  left: 85%;
+}
+.loginButton{
+  position: absolute;
+  top: 14vh;
+  height: 6vh;
+  vertical-align: center;
+  width: 24%;
+  color: #FFF;
+  background: #14446a;
+  left: 38%;
+  line-height: 6vh;
+  font-size: 28rpx;
+}

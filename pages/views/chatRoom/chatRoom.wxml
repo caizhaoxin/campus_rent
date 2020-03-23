@@ -1,0 +1,51 @@
+<!--pages/contact/contact.wxml-->
+
+<view>
+
+  <scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+    <!-- <view class='scrollMsg'> -->
+    <block wx:key wx:for='{{msgList}}' wx:for-index="index">
+
+      <!-- 单个消息1 客服发出（左） -->
+      <view class="left-line" wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style=''>
+      <!-- 头像 -->
+        <view class="left-head-pic" style=''>
+          <image style='' src='{{OppositeAvatarUrl}}'></image>
+        </view>
+        <!-- 间隔 -->
+        <view class='interval' style=''>
+          <image style='width: 4vw;' src='{{avatarUrl}}' mode='widthFix'></image>
+        </view>
+        <!-- 消息 -->
+        <view class='leftMsg'>{{item.text}}</view>
+      </view>
+
+      <!-- 单个消息2 用户发出（右） -->
+      <view class='right-line' wx:else id='msg-{{index}}' style=''>
+        <view class='rightMsg'>{{item.text}}</view>
+
+        <!-- 消息和头像之间的间隔 -->
+        <view class='interval' style=''>
+          <image style='width: 4vw;'  src='{{avatarUrl}}'></image>
+        </view>
+
+        <!-- 右边头像 -->
+        <view class="left-head-pic">
+          <image style='' src='{{MyAvatarUrl}}' mode='widthFix'></image>
+        </view>
+      </view>
+
+    </block>
+    <!-- </view> -->
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <!-- <image style='width: 7vw; margin-left: 3.2vw;' src='../../images/pic_icon.png' mode='widthFix'></image> -->
+    <input bindinput="input" bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+    <button  class='bt' bindtap='bottonSubmit'>发送</button>
+  </view>
+  
+</view>

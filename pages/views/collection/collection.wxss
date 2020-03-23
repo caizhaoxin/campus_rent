@@ -1,0 +1,257 @@
+/*我的收藏*/
+page{
+  background: #E6E8FA;
+}
+.disappear{
+  display: none;
+}
+.loading-pic{
+  background: rgb(53,105,172);
+  width: 100%;
+  height: 92vh;
+}
+
+.nothing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+}
+.loading-pic image{
+  
+  width: 100%;
+}
+.nav{
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: center;
+  line-height: 8vh;
+  font-size: 28rpx;
+  position: relative;
+  z-index: 99;
+  background: #14446a;
+  color: #E6E8FA;
+}
+.nav-content{
+  color: #FFF;
+}
+
+.nav-son{
+  height: 8vh;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* 当前选中 */
+.current {
+  background: #F0FFFF;
+  color: #14446a;
+}
+.navContent{
+ position: relative;
+ z-index: 5;
+ background: rgb(255, 254, 251);
+ border-bottom: 1px solid rgb(22, 22, 22);
+ height: 400rpx;
+}
+.nav-selected{
+  color:   #FFF 
+}
+/* 导航栏三角形的转动 打开 */
+.icon {
+ display: inline-block;
+ border: 4px solid transparent;
+ border-top: 4px solid #9b9b9b;
+ margin-left: 5px;
+ margin-bottom: 30rpx;
+}
+.icon2 {
+ display: inline-block;
+ border: 4px solid transparent;
+ border-bottom: 4px solid #9b9b9b;
+ margin-left: 5px;
+}
+
+.rotateTriangleOpen{
+   animation-name: rotateTriangleOpen;
+ animation-duration: 0.2s; /*动画执行快慢的参数*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: 1; /*动画执行多少次的参数*/
+  /*以下是兼容ios所需，参数意义与上相同*/
+  -webkit-animation-name: rotateTriangleOpen;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  
+}
+@keyframes rotateTriangleOpen {
+  /*开始转的角度*/
+  from {
+    transform: rotate(-180deg);
+  }/*结束的角度*/
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/*兼容ios*/
+@-webkit-keyframes rotateTriangleOpen {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/* 导航栏三角形的转动 关闭 */
+.rotateTriangleClose{
+   animation-name: rotateTriangleClose;
+ animation-duration: 0.2s; /*动画执行快慢的参数*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: 1; /*动画执行多少次的参数*/
+  /*以下是兼容ios所需，参数意义与上相同*/
+  -webkit-animation-name: rotateTriangleClose;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  
+}
+@keyframes rotateTriangleClose {
+  /*开始转的角度*/
+  from {
+    transform: rotate(180deg);
+  }/*结束的角度*/
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*兼容ios*/
+@-webkit-keyframes rotateTriangleClose {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.box{
+  background:rgb(255, 254, 251);
+  border-left: 15rpx solid #E6E8FA;
+  border-right: 15rpx solid #E6E8FA;
+  border-top:  20rpx solid #E6E8FA;
+  border-bottom:  5rpx solid #E6E8FA;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-start{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.left {
+  width: 170rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 15rpx;
+}
+.rent_seek_left{
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 110rpx;
+}
+
+.left .good_pic{
+  
+  width: 150rpx;
+  height: 150rpx;
+}
+.head-pic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.right{
+  height: 160rpx;
+  width: 470rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-right: 30rpx; */
+}
+.rent_seek_right{
+  width: 530rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-right: 30rpx; */
+}
+.title{
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+.nick_name{
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+.content{
+  font-size: 27rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient: vertical;
+  line-height: 35rpx;
+  color: #353535;
+}
+.type{
+  color: #14446a;
+  font-size: 25rpx;
+}
+.time{
+  font-size: 25rpx;
+  color: #888888;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+}
+.space-between{
+  justify-content: space-between;
+}
+.float-right{
+  display: float;
+  float: right;
+}
+
+.del{
+  display: float;
+  float: right;
+  margin-right: 5rpx;
+}
+.del image{
+  width: 45rpx;
+  height: 45rpx;
+}

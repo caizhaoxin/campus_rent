@@ -1,0 +1,44 @@
+/* pages/views/chatList/chatList.wxss */
+.all{
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  height: 10vh;
+  margin-top: 30rpx;
+}
+.left{
+  width: 18%;
+}
+.middle{
+  width: 70%;
+}
+.right{
+  width: 8%;
+  margin-left: 4%;
+}
+.head-pic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.del image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.tips{
+  font-size: 25rpx;
+  color: #888888;
+}
+.nick-name{
+  font-size: 30rpx;
+  color: #000000;
+  font-weight: bold;
+}

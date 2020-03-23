@@ -1,0 +1,178 @@
+/* 发布求租信息css */
+.all_page{
+  padding: 15rpx 35rpx;
+}
+/*  */
+.border-bottom{
+  margin: 40rpx 0;
+  border-bottom: 1px solid #14446a;
+}
+.disappear{
+  display: none;
+}
+.tips{
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  
+}
+.tips image{
+  width: 50rpx;
+  height: 50rpx;
+
+}
+.tips text{
+  color: #14446a;
+  font-size: 25rpx;
+  margin-left: 12rpx;
+}
+
+.title{
+  font-size: 32rpx;
+  margin-left: 30rpx;
+  line-height: 80rpx;
+  width: 40%;
+}
+.line{
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+  vertical-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.right{
+  color: #000;
+  font-size: 26rpx;
+  vertical-align: center;
+  line-height: 80rpx;
+  /* letter-spacing: 5rpx; */
+}
+.right input{
+  text-align: right;
+  vertical-align: center;
+  line-height: 80rpx;
+  /* border: 1rpx solid #000; */
+  margin: auto;
+}
+/* 输入时候的样式 */
+.placeholderStyle{
+  margin: auto;
+}
+
+/* 物品描述 */
+.box{
+  display: flex;
+  flex-direction: column;
+}
+.box textarea{
+  padding-left: 12rpx;
+  /* border: 1px solid #000; */
+  width: 95%;
+  font-size: 30rpx;
+}
+.textareaStyle{
+  
+  font-size: 28rpx;
+  padding-left: 12rpx;
+}
+.describe_food{
+  display: flex;
+  flex-direction: row;
+  
+}
+.box .tips image{
+  width: 80rpx;
+  height: 50rpx;
+}
+
+.zy-slider {
+    margin: 60rpx;
+}
+
+.add_pic{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pic_test{
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #000;
+  margin-bottom: 30rpx;
+}
+.footer button{
+  background: #14446a;
+  color: #FFFFFF;
+}
+.blank{
+  height: 100rpx;
+}
+
+.group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* background: #f9f9f9; */
+  font-size: 14px;
+}
+
+.weui-uploader__file {
+  float: left;
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+.weui-uploader__img {
+  display: block;
+  width: 79px;
+  height: 79px;
+}
+.delete{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: -160rpx;
+  
+  display: float;
+  float: right;
+}
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+}
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.hideTrue {
+  display: none
+}

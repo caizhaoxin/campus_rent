@@ -1,0 +1,92 @@
+<!-- 我的收藏页面 -->
+<!-- 菜单顶部 开始 -->
+
+<view class='nav flex'>
+  <view class="nav-son {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap='swichNav'>
+    <view class="{{currentTab==0 ? 'nav-selected' : ''}}">闲置出租</view>
+    <view class="icon {{currentTab==0 ? 'rotateTriangleOpen icon2' : 'rotateTriangleClose'}} "></view>
+  </view>
+  <view class="nav-son {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap='swichNav'>
+    <view class="{{currentTab==1 ? 'nav-selected' : ''}}">求租信息</view>
+    <view class="icon {{currentTab==1 ? 'rotateTriangleOpen icon2' : 'rotateTriangleClose'}} "></view>
+  </view>
+</view>
+<!-- 加载动画 -->
+<view class="{{loadingGif ? 'loading-pic' : 'disappear'}}">
+  <image wx:if="{{loadingGif == true}}" src='/static/img/load3.gif' mode='aspectFill'></image>
+
+</view>
+
+<swiper current='{{currentTab}}' class="{{loadingGif ? 'disappear' : 'swiper-box'}}" duration='300' style='height:92vh' bindchange='bindChange'>
+
+
+  <swiper-item>
+    <!-- 闲置出租 -->
+    <!-- 无内容显示一张图片 -->
+    <view class="{{noneGood ? 'nothing':'disappear'}}" >
+      <image src='/static/img/nothing4.png' mode='aspectFill'></image>
+    </view>
+    <scroll-view class='all' style='height:92vh' scroll-y='true'>
+      <block wx:for="{{goodsList}}">
+        <view class='box flex-row' bindtap="switch_to_store" data-itemData="{{item}}">
+          <!-- 左边放一张图 -->
+          <view class='flex-start'>
+            <!--view-->
+            <view class='left'>
+              <image src='{{item.src[0]}}' mode='aspectFill' class='good_pic'></image>
+            </view>
+            <view class='right flex-column'>
+              <view class='title'>{{item.goodsName}}</view>
+              <view class='content'>{{item.goodsDescription}}</view>
+              <view class='line space-between'>
+                <view class='type'>#闲置出租</view>
+                <view class='time float-right'>
+                  <text>{{item.submitTime}}</text>
+                </view>
+              </view>
+            </view>
+            <!--/view-->
+            <view class='del'>
+              <image catchtap="deleteColleciton" data-id="{{item.id}}" data-openid="{{item.openid}}" data-tableName="store" src='/images/aixin2_2.png'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+
+
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 下面是我的求租 -->
+  <swiper-item>
+    <scroll-view class='all' style='height:92vh' scroll-y='true'>
+    <!-- 无内容显示一张图片 -->
+    <view class="{{noneRequirement ? 'nothing':'disappear'}}" >
+      <image src='/static/img/nothing4.png' mode='aspectFill'></image>
+    </view>
+      <block wx:for="{{requirementList}}">
+        <view class='box flex-row' bindtap="switch_to_requirement" data-itemData="{{item}}">
+          <view class='flex-start'>
+            <view class='left rent_seek_left'>
+              <image src='{{item.avatarUrl}}' mode='aspectFill' class='head-pic'></image>
+            </view>
+            <view class='right rent_seek_right flex-column'>
+              <view class='nick_name'>{{item.nickName}}</view>
+              <view class='content '>{{item.requirementText}}</view>
+              <view class='line space-between'>
+                <view class='type'>#物品求租</view>
+                <view class='time float-right'>
+                  <text>{{item.submitTime}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='del'>
+              <image catchtap="deleteColleciton" data-id="{{item.id}}" data-openid="{{item.openid}}" data-tableName="requirement" src='/images/aixin2_2.png'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>
